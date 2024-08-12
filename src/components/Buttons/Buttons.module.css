@@ -1,0 +1,3 @@
+.primaryButton:hover {
+  @apply bg-primaryBlue !important;
+}
