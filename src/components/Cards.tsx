@@ -17,7 +17,7 @@ export default function MiniCard(props: MiniCardProps) {
   const PopularTag = () => {
     return (
       <div className="bg-primaryBlue text-white absolute w-5 left-0 top-0 bottom-0 rounded-l text-start flex justify-center items-center">
-        <Text className="-rotate-90 tracking-[3px] text-[8px]" size="caption">
+        <Text className="-rotate-90 tracking-[3px] min-[1440px]:text-[8px] text-[7px]" size="caption">
           POPULAR
         </Text>
       </div>
@@ -29,9 +29,9 @@ export default function MiniCard(props: MiniCardProps) {
       {...otherProps}
       bordered={false}
       className={twMerge(
-        "py-2 px-5 h-[109px] min-w-[284px] m-0 relative overflow-hidden rounded-2xl",
+        "py-2 px-5 min-[1440px]:h-[109px] h-20 min-[1440px]:min-w-[284px] m-0 relative overflow-hidden rounded-2xl",
         className,
-        withPopularTag && "px-10"
+        withPopularTag && "min-[1440px]:px-10 px-8"
       )}
     >
       {withPopularTag && <PopularTag />}

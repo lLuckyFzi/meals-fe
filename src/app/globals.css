@@ -6,13 +6,13 @@
 
 @layer components {
   .meals-h1 {
-    @apply md:text-[44px] text-2xl md:leading-[50px] font-kumbhSans;
+    @apply min-[1440px]:text-[44px] text-2xl md:leading-[50px] font-kumbhSans;
   }
   .meals-h2 {
     @apply text-4xl font-kumbhSans;
   }
   .meals-h3 {
-    @apply text-[32px] font-kumbhSans;
+    @apply min-[1440px]:text-[32px] text-2xl font-kumbhSans;
   }
   .meals-h4 {
     @apply text-[28px] font-kumbhSans;
@@ -21,7 +21,7 @@
     @apply text-2xl font-kumbhSans;
   }
   .meals-h6 {
-    @apply text-xl font-kumbhSans;
+    @apply min-[1440px]:text-xl text-xs font-kumbhSans;
   }
   .meals-subtitle {
     @apply text-lg;

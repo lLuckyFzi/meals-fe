@@ -9,6 +9,7 @@ const kumbh_sans = Kumbh_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Meals",
   description: "Good mood with food",
+  icons: "/logo/meals-logo.png",
 };
 
 export default function RootLayout({
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/logo/meals-logo.png" />
       <body className={kumbh_sans.className}>
         <PublicHeader />
         {children}

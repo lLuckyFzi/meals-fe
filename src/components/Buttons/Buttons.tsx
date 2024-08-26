@@ -17,7 +17,7 @@ export default function PrimaryButton(props: PrimaryButtonProps) {
       className={twMerge(
         style.primaryButton,
         className,
-        "bg-secondaryBlue rounded-2xl font-kumbhSans px-6 py-4"
+        "bg-secondaryBlue rounded-2xl font-kumbhSans px-6 py-4 max-[1440px]:px-3 min-[1440px]:text-xl text-sm"
       )}
     >
       {children || "Button"}
