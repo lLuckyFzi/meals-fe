@@ -7,7 +7,11 @@ type CardsProps = {
   className?: string;
   withPopularTag?: boolean;
 };
+
 type MiniCardProps = CardsProps & {
+  children: ReactNode;
+};
+type PrimaryCardProps = CardsProps & {
   children: ReactNode;
 };
 
@@ -17,7 +21,10 @@ export default function MiniCard(props: MiniCardProps) {
   const PopularTag = () => {
     return (
       <div className="bg-primaryBlue text-white absolute w-5 left-0 top-0 bottom-0 rounded-l text-start flex justify-center items-center">
-        <Text className="-rotate-90 tracking-[3px] min-[1440px]:text-[8px] text-[7px]" size="caption">
+        <Text
+          className="-rotate-90 tracking-[3px] min-[1440px]:text-[8px] text-[7px]"
+          size="caption"
+        >
           POPULAR
         </Text>
       </div>
@@ -35,6 +42,16 @@ export default function MiniCard(props: MiniCardProps) {
       )}
     >
       {withPopularTag && <PopularTag />}
+      {children}
+    </Card>
+  );
+}
+
+export function PrimaryCard(props: PrimaryCardProps) {
+  const { children, className, withPopularTag, ...otherProps } = props;
+
+  return (
+    <Card {...otherProps} bordered={false}>
       {children}
     </Card>
   );

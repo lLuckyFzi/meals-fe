@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Kumbh+Sans:wght@100..900&family=Lusitana:wght@400;700&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Kumbh+Sans:wght@100..900&family=Lusitana:wght@400;700&family=Poppins&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -45,4 +45,53 @@
 /* Ant Card */
 .ant-card .ant-card-body {
   padding: 0px;
+  border-radius: 0px;
+}
+.ant-card {
+  overflow: hidden;
+}
+
+/* Radio Button */
+.ant-radio-button-wrapper:first-child {
+  border-start-start-radius: 0px;
+  border-end-start-radius: 0px;
+}
+.ant-radio-button-wrapper:last-child {
+  border-start-end-radius: 0px;
+  border-end-end-radius: 0px;
+}
+.ant-radio-button-wrapper:last-child {
+  border-radius: 500px;
+}
+.ant-radio-button-wrapper:first-child {
+  border-radius: 500px;
+}
+.ant-radio-group {
+  @apply flex gap-x-5;
+}
+.ant-radio-button-wrapper > .ant-radio-button {
+  @apply border-primaryBlue border rounded-full;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  @apply border-none rounded-full bg-primaryBlue text-white;
+}
+.ant-radio-button-wrapper-checked:not(
+    .ant-radio-button-wrapper-disabled
+  ):hover {
+  @apply text-white;
+}
+.ant-radio-button-wrapper:not(:first-child)::before {
+  @apply hidden;
+}
+.ant-radio-button-wrapper {
+  @apply rounded-full px-10 h-10 flex justify-center items-center;
+}
+
+/* Pagination */
+.ant-pagination .ant-pagination-item-active {
+  @apply bg-primaryBlue text-white;
+}
+.ant-pagination .ant-pagination-item-active a,
+.ant-pagination .ant-pagination-item-active a:hover {
+  @apply text-white;
 }

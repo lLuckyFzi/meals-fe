@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 
 type ButtonsProps = ButtonProps;
 type PrimaryButtonProps = ButtonsProps & {};
+type IconButtonProps = ButtonsProps & {};
 
 export default function PrimaryButton(props: PrimaryButtonProps) {
   const { children, className, ...otherProps } = props;
@@ -23,4 +24,9 @@ export default function PrimaryButton(props: PrimaryButtonProps) {
       {children || "Button"}
     </Button>
   );
+}
+
+export function IconButton(props: IconButtonProps) {
+  const { ...otherProps } = props;
+  return <Button type="text" className="p-0" {...otherProps} />;
 }
