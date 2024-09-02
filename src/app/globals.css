@@ -21,7 +21,7 @@
     @apply text-2xl font-kumbhSans;
   }
   .meals-h6 {
-    @apply min-[1440px]:text-xl text-xs font-kumbhSans;
+    @apply min-[1440px]:text-xl font-kumbhSans;
   }
   .meals-subtitle {
     @apply text-lg;

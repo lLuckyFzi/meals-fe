@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="choose-meals" className="mb-11">
+      <Section id="choose-meals" className="my-48">
         <div className="w-full px-24 flex flex-col gap-y-24">
           <div className="text-center flex justify-center">
             <Text
@@ -180,7 +180,8 @@ export default function Home() {
                 ]}
               />
             </div>
-            <div className="flex gap-x-[100px] gap-y-[70px] min-[1440px]:gap-20 justify-between flex-wrap">
+            <div className="relative overflow-visible flex gap-x-[100px] gap-y-[70px] min-[1440px]:gap-20 justify-between flex-wrap">
+              <div className="absolute inset-0 z-[-1] bg-blue-100 rounded-md blur-[300px]"></div>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]?.map((d) => {
                 return (
                   <FavMealCard
